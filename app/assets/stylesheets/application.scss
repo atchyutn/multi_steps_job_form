@@ -1,0 +1,23 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "wizard";
+@import "home";
+
+.has_error{
+  color: #B71C1C;
+}
+
+.navbar-inverse {
+  background-color: #2196F3;
+  border-color: #03A9F4;
+  .navbar-brand {
+    color: white;
+  }
+  .navbar-nav {
+    li {
+      a{
+        color: white;
+      }
+    }
+  }
+}

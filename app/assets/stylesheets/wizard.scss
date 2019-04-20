@@ -1,0 +1,32 @@
+.new_user_wizard{
+  background: #fab753;
+  padding: 2em;
+  padding-bottom: 3em;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 15px #EEEEEE;
+}
+
+.breadcrumb{
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background: #03A9F4;
+  color: white;
+  a{
+    color: white;
+  }
+  .active{
+    color: black;
+    font-weight: bold;
+    padding: 1em;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background: #fab753;
+  }
+}
+
+span{
+  font-size: 1em;
+  .glyphicon{
+    padding-right: 0.5em;
+  }
+}

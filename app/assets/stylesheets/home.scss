@@ -1,0 +1,43 @@
+// .horizontal-line{
+//   margin-top: 5em;
+//   margin-bottom: 1em;
+// }
+
+.job-card{
+  margin-bottom: 2em;
+  padding: 2em;
+  cursor: pointer; 
+  border-left: 10px solid #FFCA28;
+  .job-heading{
+    h3{
+    padding-top: 1em;
+    text-decoration: underline;
+    text-decoration-color: #FFCA28;
+    }
+  }
+  
+  .comp-logo{
+    height: 10em;
+    width: 10em;
+  }
+  
+  span{
+    color: gray;
+    font-size: 1em;
+    .glyphicon{
+      color:#3F51B5; 
+      padding: 0.5em;
+    }
+  }
+}
+
+.job-card:hover{
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px 15px #EEEEEE;
+  border-left: 10px solid #4191e2;
+}
+
+.job-description{
+  display: none;
+}
+
