@@ -3,6 +3,10 @@
 @import "wizard";
 @import "home";
 
+body{
+  // min-height: 100vh;
+}
+
 .has_error{
   color: #B71C1C;
 }
@@ -19,5 +23,15 @@
         color: white;
       }
     }
+  }
+}
+
+
+.footer{
+  min-height: 10em;
+  background: #F5F5F5;
+  text-align: center;
+  p{
+    padding-top: 5em;
   }
 }

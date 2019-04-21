@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('.job-heading').on("click", function(){
-    $('.job-description').toggle();
-  });
+  $('.job-heading').click(function(){
+    $("#"+"job-description"+$(this).data('id')).toggle(); 
+ });
 })
