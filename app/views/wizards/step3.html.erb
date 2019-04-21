@@ -14,14 +14,14 @@
     <%= simple_form_for @user_wizard, as: :user_wizard, url: validate_step_wizard_path do |f| %>
       <%= f.error_notification %>
       <%= hidden_field_tag :current_step, 'step3' %>
-      <%= f.input :first_name, :label => 'Current Employer' %>
-      <%= f.input :last_name, :label => 'Total Experience(Years)' %>
-      <%= f.input :email, :label => 'Relevant Experience(Years)'%>
-      <%= f.input :phone_number, :label => 'Current CTC(LPA)' %>
-      <%= f.input :address_1, :label => 'Expected CTC(LPA)' %>
-      <%= f.input :address_2, :label => 'Notice Period(Days)' %>
-      <%= f.input :zip_code, :label => 'Prefered Work location' %>
-      <%= f.input :city, :label => 'Reason for Job Change' %>
+      <%= f.input :employer, :label => 'Current Employer' %>
+      <%= f.input :total_exp, :label => 'Total Experience(Years)' %>
+      <%= f.input :relevant_exp, :label => 'Relevant Experience(Years)'%>
+      <%= f.input :cctc, :label => 'Current CTC(LPA)' %>
+      <%= f.input :ectc, :label => 'Expected CTC(LPA)' %>
+      <%= f.input :notice_period, :label => 'Notice Period(Days)' %>
+      <%= f.input :prefered_work_location, :label => 'Prefered Work location' %>
+      <%= f.input :reason_for_change, :label => 'Reason for Job Change' %>
       <div class="pull-right">
         <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
           <span><i class="glyphicon glyphicon-chevron-right"></i>Continue</span>
