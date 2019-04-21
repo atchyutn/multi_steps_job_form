@@ -5,15 +5,29 @@
   <li class="active" id="step4">Step 4</li>
 </ol>
 
-<%= simple_form_for @user_wizard, as: :user_wizard, url: validate_step_wizard_path do |f| %>
-  <%= f.error_notification %>
-
-  <%= hidden_field_tag :current_step, 'step4' %>
-  <%= f.input :phone_number %>
-
-  <div class="pull-right">
-    <%= button_tag(type: 'submit', class: "btn btn-success") do %>
-      <span><i class="glyphicon glyphicon-send"></i>Submit Application</span>
-    <%end%>  
+<div class="row">
+  <div class="col-md-6">
+    <img src="https://ez.no/var/ezflow_site/storage/images/media/images/developer-girl4/677094-1-eng-GB/Developer-girl.png" class="animation">
   </div>
-<% end %>
+  <div class='col-md-6 form-group'>
+    <h2>Social links & CV</h2>
+    <%= simple_form_for @user_wizard, as: :user_wizard, url: validate_step_wizard_path do |f| %>
+      <%= f.error_notification %>
+      <%= hidden_field_tag :current_step, 'step4' %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :email, class: 'form-control' %>
+      <%= f.input :phone_number %>
+      <%= f.input :address_1 %>
+      <%= f.input :address_2 %>
+      <%= f.input :zip_code %>
+      <%= f.input :city %>
+      <%= f.input :country %>
+      <div class="pull-right">
+        <%= button_tag(type: 'submit', class: "btn btn-success") do %>
+          <span><i class="glyphicon glyphicon-send"></i>Submit Application</span>
+        <%end%>  
+      </div>
+    <% end %>
+  </div>
+</div>

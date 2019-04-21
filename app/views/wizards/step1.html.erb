@@ -7,13 +7,30 @@
   </ol>
 </div>
 
-<div class='col-md-12 form-group'>
-<h2>Basic Details</h2>
-  <%= simple_form_for @user_wizard, as: :user_wizard, url: validate_step_wizard_path do |f| %>
-    <%= f.error_notification %>
+
+<div class="row">
+  <div class="col-md-6">
+    <img src="https://cdn1.vectorstock.com/i/1000x1000/89/95/man-standing-with-pen-and-file-in-hands-vector-8108995.jpg" class="animation">
+  </div>
+  <div class='col-md-6 form-group'>
+    <h2>Basic Details</h2>
+    <%= simple_form_for @user_wizard, as: :user_wizard, url: validate_step_wizard_path do |f| %>
+      <%= f.error_notification %>
       <%= hidden_field_tag :current_step, 'step1' %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
       <%= f.input :email, class: 'form-control' %>
-      <%= f.submit 'Continue', class: 'btn btn-primary pull-right' %>
-    </div>
-  <% end %>
+      <%= f.input :phone_number %>
+      <%= f.input :address_1 %>
+      <%= f.input :address_2 %>
+      <%= f.input :zip_code %>
+      <%= f.input :city %>
+      <%= f.input :country %>
+      <div class="pull-right">
+        <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+          <span><i class="glyphicon glyphicon-chevron-right"></i>Continue</span>
+        <%end%>  
+      </div>
+    <% end %>
+  </div>
 </div>

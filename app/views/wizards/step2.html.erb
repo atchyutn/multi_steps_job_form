@@ -5,12 +5,29 @@
   <li>Step 4</li>
 </ol>
 
-<%= simple_form_for @user_wizard, as: :user_wizard, url: validate_step_wizard_path do |f| %>
-  <%= f.error_notification %>
-
-  <%= hidden_field_tag :current_step, 'step2' %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-
-  <%= f.submit 'Continue', class: 'btn btn-primary pull-right' %>
-<% end %>
+<div class="row">
+  <div class="col-md-6">
+    <img src="https://png2.kisspng.com/sh/ab92cfbcaee0e0c97cb1aa72759506f7/L0KzQYi4UsA3N2cATZGAYUK7cojqgcQybmY2TpCCMkG7RYa9UsE2OWM7SakEM0C1R4G5TwBvbz==/5a28b7ca41f516.7218556215126179302702.png" class="animation">
+  </div>
+  <div class='col-md-6 form-group'>
+    <h2>Academic Details</h2>
+    <%= simple_form_for @user_wizard, as: :user_wizard, url: validate_step_wizard_path do |f| %>
+      <%= f.error_notification %>
+        <%= hidden_field_tag :current_step, 'step2' %>
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <%= f.input :email, class: 'form-control' %>
+        <%= f.input :phone_number %>
+        <%= f.input :address_1 %>
+        <%= f.input :address_2 %>
+        <%= f.input :zip_code %>
+        <%= f.input :city %>
+        <%= f.input :country %>
+        <div class="pull-right">
+          <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+            <span><i class="glyphicon glyphicon-chevron-right"></i>Continue</span>
+          <%end%>  
+        </div>
+    <% end %>
+  </div>
+</div>
