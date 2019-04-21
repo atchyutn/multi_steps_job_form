@@ -14,15 +14,14 @@
     <%= simple_form_for @user_wizard, as: :user_wizard, url: validate_step_wizard_path do |f| %>
       <%= f.error_notification %>
       <%= hidden_field_tag :current_step, 'step3' %>
-      <%= f.input :first_name %>
-      <%= f.input :last_name %>
-      <%= f.input :email, class: 'form-control' %>
-      <%= f.input :phone_number %>
-      <%= f.input :address_1 %>
-      <%= f.input :address_2 %>
-      <%= f.input :zip_code %>
-      <%= f.input :city %>
-      <%= f.input :country %>
+      <%= f.input :first_name, :label => 'Current Employer' %>
+      <%= f.input :last_name, :label => 'Total Experience(Years)' %>
+      <%= f.input :email, :label => 'Relevant Experience(Years)'%>
+      <%= f.input :phone_number, :label => 'Current CTC(LPA)' %>
+      <%= f.input :address_1, :label => 'Expected CTC(LPA)' %>
+      <%= f.input :address_2, :label => 'Notice Period(Days)' %>
+      <%= f.input :zip_code, :label => 'Prefered Work location' %>
+      <%= f.input :city, :label => 'Reason for Job Change' %>
       <div class="pull-right">
         <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
           <span><i class="glyphicon glyphicon-chevron-right"></i>Continue</span>

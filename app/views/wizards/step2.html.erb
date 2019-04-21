@@ -13,16 +13,21 @@
     <h2>Academic Details</h2>
     <%= simple_form_for @user_wizard, as: :user_wizard, url: validate_step_wizard_path do |f| %>
       <%= f.error_notification %>
+        <h3>Graduation</h3>
         <%= hidden_field_tag :current_step, 'step2' %>
-        <%= f.input :first_name %>
-        <%= f.input :last_name %>
-        <%= f.input :email, class: 'form-control' %>
-        <%= f.input :phone_number %>
-        <%= f.input :address_1 %>
-        <%= f.input :address_2 %>
-        <%= f.input :zip_code %>
-        <%= f.input :city %>
-        <%= f.input :country %>
+        <%= f.input :first_name, :label => 'University' %>
+        <%= f.input :country, label: "Highest Qualification", collection: [ [ "Masters", "MT" ], [ "Bachelors", "BT" ], ], :selected => 'Masters' %>
+        <%= f.input :last_name, :label => 'Grade Points' %>
+        <hr>
+        <h3>Schooling</h3>
+        <%= f.input :email, :label => 'School' %>
+        <%= f.input :first_name, :label => 'Major' %>
+        <%= f.input :last_name, :label => 'Grade Points' %> 
+        <hr>
+        <h3>General Questions</h3>
+        <%= f.input :phone_number, :lable => 'What extracurricular activities did you participate in?' %>
+        <%= f.input :address_1, :label => 'What influenced your choice of college?' %>
+        <%= f.input :address_2, :label => 'Do your grades reflect your potential?' %>
         <div class="pull-right">
           <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
             <span><i class="glyphicon glyphicon-chevron-right"></i>Continue</span>

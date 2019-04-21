@@ -6,27 +6,40 @@
 </ol>
 
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-4">
     <img src="https://ez.no/var/ezflow_site/storage/images/media/images/developer-girl4/677094-1-eng-GB/Developer-girl.png" class="animation">
   </div>
-  <div class='col-md-6 form-group'>
+  <div class='col-md-8 form-group'>
     <h2>Social links & CV</h2>
     <%= simple_form_for @user_wizard, as: :user_wizard, url: validate_step_wizard_path do |f| %>
       <%= f.error_notification %>
       <%= hidden_field_tag :current_step, 'step4' %>
-      <%= f.input :first_name %>
-      <%= f.input :last_name %>
-      <%= f.input :email, class: 'form-control' %>
-      <%= f.input :phone_number %>
-      <%= f.input :address_1 %>
-      <%= f.input :address_2 %>
-      <%= f.input :zip_code %>
-      <%= f.input :city %>
-      <%= f.input :country %>
-      <div class="pull-right">
-        <%= button_tag(type: 'submit', class: "btn btn-success") do %>
-          <span><i class="glyphicon glyphicon-send"></i>Submit Application</span>
-        <%end%>  
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.input :first_name, :label => 'Github url' %>
+          <%= f.input :last_name, :label => 'LinkedIn url' %>
+          <%= f.input :email, :label => 'StackOverflow url' %>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :address_2, :label => 'Personal website/Blog' %>
+          <%= f.input :first_name, :label => 'Twitter url' %>
+          <%= f.input :zip_code, :label => 'Skype Id' %>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.simple_fields_for :attached_files do |af| %>
+            <%= af.input :file, as: :file, label: false, required: true, type: "file", :label => "Upload CV" %>
+          <% end %>
+        </div>
+        <div class="col-md-6">
+          <div class="pull-right">
+            <%= button_tag(type: 'submit', class: "btn btn-success") do %>
+              <span><i class="glyphicon glyphicon-send"></i>Submit Application</span>
+            <%end%>  
+          </div>
+        </div>
       </div>
     <% end %>
   </div>
