@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161129002314) do
+ActiveRecord::Schema.define(version: 20190421050312) do
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
@@ -22,8 +22,31 @@ ActiveRecord::Schema.define(version: 20161129002314) do
     t.string   "city"
     t.string   "country"
     t.string   "phone_number"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "university"
+    t.string   "highest_qualification"
+    t.string   "grade_points_grad"
+    t.string   "school"
+    t.string   "major"
+    t.string   "grade_points_school"
+    t.string   "activities"
+    t.string   "goal"
+    t.string   "opportunities"
+    t.string   "employer"
+    t.string   "total_exp"
+    t.string   "relevant_exp"
+    t.string   "cctc"
+    t.string   "ectc"
+    t.string   "notice_period"
+    t.string   "prefered_work_location"
+    t.string   "reason_for_change"
+    t.string   "github"
+    t.string   "linkedin"
+    t.string   "stackoverflow"
+    t.string   "blog"
+    t.string   "twitter"
+    t.string   "skype"
   end
 
 end

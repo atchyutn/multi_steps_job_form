@@ -7,4 +7,27 @@ class User < ApplicationRecord
   validates :city, presence: true
   validates :country, presence: true
   validates :phone_number, presence: true
+  validates :university, presence: true
+  validates :highest_qualification, presence: true
+  validates :grade_points_grad, presence: true
+  validates :school, presence: true
+  validates :major, presence: true
+  validates :grade_points_school, presence: true
+  validates :activities, presence: true
+  validates :goal, presence: true
+  validates :opportunities, presence: true
+  validates :employer, presence: true
+  validates :total_exp, presence: true
+  validates :relevant_exp, presence: true
+  validates :cctc, presence: true
+  validates :ectc, presence: true
+  validates :notice_period, presence: true
+  validates :prefered_work_location, presence: true
+  validates :reason_for_change, presence: true
+  validates :github, presence: true
+  validates :linkedin, presence: true
+  validates :stackoverflow, presence: true
+  validates :blog, presence: true
+  validates :twitter, presence: true
+  validates :skype, presence: true
 end

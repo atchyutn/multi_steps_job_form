@@ -15,19 +15,19 @@
       <%= f.error_notification %>
         <h3>Graduation</h3>
         <%= hidden_field_tag :current_step, 'step2' %>
-        <%= f.input :first_name, :label => 'University' %>
-        <%= f.input :country, label: "Highest Qualification", collection: [ [ "Masters", "MT" ], [ "Bachelors", "BT" ], ], :selected => 'Masters' %>
-        <%= f.input :last_name, :label => 'Grade Points' %>
+        <%= f.input :university, :label => 'University' %>
+        <%= f.input :highest_qualification, label: "Highest Qualification", collection: [ [ "Masters", "MT" ], [ "Bachelors", "BT" ], ], :selected => 'Masters' %>
+        <%= f.input :grade_points_grad, :label => 'Grade Points' %>
         <hr>
         <h3>Schooling</h3>
-        <%= f.input :email, :label => 'School' %>
-        <%= f.input :first_name, :label => 'Major' %>
-        <%= f.input :last_name, :label => 'Grade Points' %> 
+        <%= f.input :school, :label => 'School' %>
+        <%= f.input :major, :label => 'Major' %>
+        <%= f.input :grade_points_school, :label => 'Grade Points' %> 
         <hr>
         <h3>General Questions</h3>
-        <%= f.input :phone_number, :lable => 'What extracurricular activities did you participate in?' %>
-        <%= f.input :address_1, :label => 'What influenced your choice of college?' %>
-        <%= f.input :address_2, :label => 'Do your grades reflect your potential?' %>
+        <%= f.input :activities, :label => 'What extracurricular activities did you participate in?' %>
+        <%= f.input :goal, :label => 'What is your next 5 year goal?' %>
+        <%= f.input :opportunities, :label => 'What other opportunites you got in college?' %>
         <div class="pull-right">
           <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
             <span><i class="glyphicon glyphicon-chevron-right"></i>Continue</span>

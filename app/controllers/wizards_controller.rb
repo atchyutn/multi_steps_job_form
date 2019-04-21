@@ -44,7 +44,7 @@ class WizardsController < ApplicationController
   end
 
   def user_wizard_params
-    params.require(:user_wizard).permit(:email, :first_name, :last_name, :address_1, :address_2, :zip_code, :city, :country, :phone_number)
+    params.require(:user_wizard).permit(:email, :first_name, :last_name, :address_1, :address_2, :zip_code, :city, :country, :phone_number, :university, :highest_qualification, :grade_points_grad, :school, :major, :grade_points_school, :activities, :goal, :opportunities, :employer, :total_exp, :relevant_exp, :cctc, :ectc, :notice_period, :prefered_work_location, :reason_for_change, :github, :linkedin, :stackoverflow, :blog, :twitter, :skype)
   end
 
   class InvalidStep < StandardError; end
